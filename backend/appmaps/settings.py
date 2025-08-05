@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pedidos',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -75,17 +76,19 @@ WSGI_APPLICATION = 'appmaps.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
-        'NAME': 'i360_data',
-        'USER': 'sa',
-        'PASSWORD': 'calama1.',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'misrutas',
+        'USER': 'postgres',
+        'PASSWORD': 'NuevaPassword123',
+        'HOST': 'localhost',  # ✅ CAMBIA esto
+        'PORT': '5432',
         'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
-        },
+            'options': '-c client_encoding=UTF8'
+        }
     }
 }
+
+
 
 
 
